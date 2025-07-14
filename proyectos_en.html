@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - David Noya Couselo</title>
+    <link rel="stylesheet" href="estilo2.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="menu">
+                <li><a href="index_en.html">Home</a></li>
+                <li><a href="sobremi_en.html">About Me</a></li>
+                <li><a href="formacion_en.html">Education</a></li>
+                <li><a href="experiencia_en.html">Experience</a></li>
+                <li><a href="proyectos_en.html" class="active">Projects</a></li>
+                <li><a href="contacto_en.html">Contact Me</a></li>
+                <!-- Eliminado el logo de LinkedIn del menú -->
+            </ul>
+            <div class="hamburger-menu" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+
+        <!-- Container for the language button and LinkedIn -->
+        <div class="top-right-container">
+            <!-- Language switch button -->
+            <a href="proyectos.html" class="language-button">Español</a>
+            <!-- LinkedIn Button -->
+            <a href="https://www.linkedin.com/in/david-noya-couselo-2848551a5" target="_blank">
+                <img src="linkedin5.1.png" alt="LinkedIn" class="linkedin-logo">
+            </a>
+        </div>
+    </header>
+
+    <section id="proyectos">
+        <div class="container">
+            <h1 class="titulo-gris">Projects</h1>
+            
+            <!-- Project: Semaforín -->
+            <div class="project-item">
+                <div class="project-content">
+                    <h3>Semaforín v1.0</h3>
+                    <p>Thesis: Project based on the development of a model (LLM) using Retrieval-Augmented Generation (RAG) to answer questions related to traffic and road safety in Spain. It received a final grade of 9.5.</p>
+                    <img src="semaforin.jpg" alt="Semaforín App" class="dashboard-img">
+                </div>
+            </div>
+            <hr>
+            
+            <!-- Project: Binary Classification Work -->
+            <div class="project-item">
+                <div class="project-content">
+                    <h3>Binary Classification Work</h3>
+                    <p>Analysis and development of a binary classification model to distinguish between two classes in a dataset, using advanced machine learning techniques.</p>
+                    <iframe src="TareaML_DavidNoyaCouselo.pdf" width="100%" height="500px"></iframe>
+                    <p><a href="TareaML_DavidNoyaCouselo.pdf" download>Download PDF Report</a></p>
+                </div>
+            </div>
+            <hr>
+
+            <!-- Project: Temperature Prediction in Santiago de Compostela -->
+            <div class="project-item">
+                <div class="project-content">
+                    <h3>Temperature Prediction in Santiago de Compostela</h3>
+                    <p>A time series analysis of average monthly temperatures in Santiago de Compostela between 2010 and 2023, using exponential smoothing and SARIMA models to predict future temperatures.</p>
+                    <iframe src="Estudio predicción de temperaturas SDC.pdf" width="100%" height="500px"></iframe>
+                    <p><a href="Estudio predicción de temperaturas SDC.pdf" download>Download PDF Report</a></p>
+                </div>
+            </div>
+            <hr>
+
+            <!-- Project: Tableau Dashboard for 2015 Sales Analysis -->
+            <div class="project-item">
+                <div class="project-content">
+                    <h3>Tableau Dashboard for 2015 Sales Analysis</h3>
+                    <p>Development of an interactive Tableau dashboard to analyze sales across various countries in 2015, providing a comprehensive view of sales performance.</p>
+                    <a href="https://eu-west-1a.online.tableau.com/t/davidnoy93e9d5d7c9/views/David_Noya_Couselo_tarea_BI/Dashboardfinal" target="_blank">
+                       <img src="dashboard.png" alt="Tableau Dashboard" class="dashboard-img">
+                    </a>
+                </div>
+            </div>
+            <hr>
+
+            <!-- Project: Fittednfit.com - Online Store -->
+            <div class="project-item">
+                <div class="project-content">
+                    <h3>Fittednfit.com - Online Store (paused)</h3>
+                    <p>Creation and development of an online sportswear store, focusing on UX/UI and digital marketing strategies to attract customers.</p>
+                    <img src="fittednfit.jpg" alt="Fittednfit.com" class="dashboard-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 David Noya Couselo. All rights reserved.</p>
+    </footer>
+
+    <!-- Script for the hamburger menu -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

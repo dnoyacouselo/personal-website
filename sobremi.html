@@ -9,45 +9,54 @@
 <body>
     <header>
         <nav>
-            <ul>
+            <ul id="menu">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="sobremi.html" class="active">Sobre mí</a></li>
                 <li><a href="formacion.html">Formación</a></li>
                 <li><a href="experiencia.html">Experiencia</a></li>
                 <li><a href="proyectos.html">Proyectos</a></li>
                 <li><a href="contacto.html">Contáctame</a></li>
-                <li class="linkedin-link">
-                    <a href="https://www.linkedin.com/in/david-noya-couselo-2848551a5" target="_blank">
-                        <img src="linkedin5.1.png" alt="LinkedIn" class="linkedin-logo">
-                    </a>
             </ul>
+            <div class="hamburger-menu" onclick="toggleMenu()">&#9776;</div>
         </nav>
+
+        <!-- Contenedor del botón y LinkedIn -->
+        <div class="top-right-container">
+            <!-- Botón de cambio de idioma -->
+            <a href="sobremi_en.html" class="language-button">English</a>
+            <!-- Enlace a LinkedIn -->
+            <a href="https://www.linkedin.com/in/david-noya-couselo-2848551a5" target="_blank">
+                <img src="linkedin5.1.png" alt="LinkedIn" class="linkedin-logo">
+            </a>
+        </div>
     </header>
 
     <section id="sobre-mi">
-        <div class="container">
+        <div class="sobre-mi-container">
             <h1 class="titulo-gris">Sobre mí</h1>
             <img src="foto2.jpg" alt="David Noya Couselo" class="profile-img">
-            <p>
-                Soy un estudiante del Máster en Big Data, Data Science & Inteligencia Artificial, muy curioso y con una gran vocación por la resolución de problemas. Mi inquietud por aprender me lleva a dedicar muchas horas a los temas que me gustan, especialmente aquellos que me suponen un reto.
-            </p>
-            <p>
-                Los desafíos intelectuales me motivan enormemente. Disfruto enfrentándome a problemas difíciles y encontrando soluciones creativas, lo que me ha llevado a desarrollar fuertes habilidades analíticas y de resolución de problemas.
-            </p>
-            <p>
-                Mi curiosidad no se limita al ámbito académico. Creo firmemente en la importancia de las experiencias vividas para ampliar horizontes. Los viajes son mi forma favorita de aprender, ya que me permiten sumergirme en nuevas culturas, perspectivas y formas de vida.
-            </p>
-            <p>
-                La lectura, especialmente de libros de historia, es otro de mis hobbies. Encuentro muy interesante cómo los eventos del pasado han moldeado nuestro presente. Esta perspectiva histórica enriquece la comprensión del mundo actual y ayuda a abordar los problemas contemporáneos con una visión más amplia y contextualizada.
-            </p>
-            <p>
-                En esencia, soy un eterno aprendiz. Ya sea a través de mis estudios en inteligencia artificial y física, mis viajes, o mis lecturas, siempre estoy buscando nuevas formas de expandir mis conocimientos y habilidades. Creo que esta combinación de curiosidad intelectual, amor por los desafíos y apreciación por la historia me permite aportar una perspectiva única y valiosa a cualquier proyecto o conversación en la que participe.
-            </p>
+            <p>Soy un estudiante de Máster en Big Data, Data Science e Inteligencia Artificial. Mi profunda curiosidad me lleva a dedicar tiempo y esfuerzo a aprender, especialmente cuando se trata de resolver problemas complejos o afrontar desafíos intelectuales. No me interesa quedarme en la superficie; siempre busco comprender los conceptos a fondo y encontrar soluciones que realmente aporten valor.</p>
+
+    <p>Mi enfoque analítico y mi pasión por los desafíos están respaldados por mi formación en física y mi experiencia en inteligencia artificial y ciencia de datos. Me motiva explorar cómo la tecnología puede aplicarse para resolver problemas del mundo real, pero también disfruto aprendiendo por el mero placer de entender algo nuevo.</p>
+
+    <p>Viajar es una de mis mayores pasiones. No solo me atrae descubrir nuevos lugares, sino también entender las culturas y perspectivas que dan forma a diferentes partes del mundo. Este intercambio me ayuda a desarrollar una visión más amplia y enriquecedora, que intento aplicar tanto en mi vida personal como profesional.</p>
+
+    <p>Además, la lectura, especialmente sobre historia, juega un papel importante en mi día a día. Me fascina cómo los eventos del pasado han moldeado el mundo tal como lo conocemos y cómo esta perspectiva histórica puede ofrecer ideas frescas para abordar los desafíos actuales.</p>
+
+    <p>En resumen, soy alguien que combina una curiosidad constante con una mentalidad práctica y un impulso por encontrar significado en lo que hago. Mi objetivo es crecer tanto personal como profesionalmente y aportar algo único a cada proyecto o desafío que enfrento.</p>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2024 David Noya Couselo. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Script para el menú hamburguesa (si aplica) -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

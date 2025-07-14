@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - David Noya Couselo</title>
+    <link rel="stylesheet" href="estilo2.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="menu">
+                <li><a href="index_en.html">Home</a></li>
+                <li><a href="sobremi_en.html" class="active">About Me</a></li>
+                <li><a href="formacion_en.html">Education</a></li>
+                <li><a href="experiencia_en.html">Experience</a></li>
+                <li><a href="proyectos_en.html">Projects</a></li>
+                <li><a href="contacto_en.html">Contact Me</a></li>
+            </ul>
+            <div class="hamburger-menu" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+
+        <!-- Contenedor del botón y LinkedIn -->
+        <div class="top-right-container">
+            <!-- Botón de cambio de idioma -->
+            <a href="sobremi.html" class="language-button">Español</a>
+            <!-- Enlace a LinkedIn -->
+            <a href="https://www.linkedin.com/in/david-noya-couselo-2848551a5" target="_blank">
+                <img src="linkedin5.1.png" alt="LinkedIn" class="linkedin-logo">
+            </a>
+        </div>
+    </header>
+
+    <section id="about-me">
+        <div class="sobre-mi-container">
+            <h1 class="titulo-gris">About Me</h1>
+            <img src="foto2.jpg" alt="David Noya Couselo" class="profile-img">
+            <p>I am a Master's student in Big Data, Data Science & Artificial Intelligence. I have an insatiable curiosity that drives me to dedicate time and effort to learning, especially when it involves solving complex problems or tackling intellectual challenges. I’m not interested in staying on the surface; I always aim to deeply understand concepts and find solutions that truly add value.</p>
+
+    		<p>My analytical approach and passion for challenges are backed by my background in physics and my expertise in artificial intelligence and data science. I’m motivated by exploring how technology can be applied to solve real-world problems, but I also enjoy learning for the sheer joy of understanding something new.</p>
+
+    <p>Traveling is one of my greatest passions. I’m not only drawn to discovering new places but also to understanding the cultures and perspectives that shape different parts of the world. This exchange helps me develop a broader and more enriching outlook, which I strive to apply in both my personal and professional life.</p>
+
+    <p>Additionally, reading, particularly about history, plays an important role in my daily routine. I’m fascinated by how past events have shaped the world as we know it and how this historical perspective can offer fresh ideas for addressing current challenges.</p>
+
+    <p>In short, I am someone who combines constant curiosity with a practical mindset and a drive to find meaning in what I do. My goal is to grow both personally and professionally and to bring something unique to every project or challenge I take on.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 David Noya Couselo. All rights reserved.</p>
+    </footer>
+
+    <!-- Script para el menú hamburguesa (si aplica) -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

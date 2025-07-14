@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - David Noya Couselo</title>
+    <link rel="stylesheet" href="estilo2.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="menu">
+                <li><a href="index_en.html">Home</a></li>
+                <li><a href="sobremi_en.html">About Me</a></li>
+                <li><a href="formacion_en.html">Education</a></li>
+                <li><a href="experiencia_en.html">Experience</a></li>
+                <li><a href="proyectos_en.html">Projects</a></li>
+                <li><a href="contacto_en.html" class="active">Contact Me</a></li>
+                <!-- Eliminado el logo de LinkedIn del menú -->
+            </ul>
+            <div class="hamburger-menu" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+
+        <!-- Container for the language button and LinkedIn -->
+        <div class="top-right-container">
+            <!-- Language switch button -->
+            <a href="contacto.html" class="language-button">Español</a>
+            <!-- LinkedIn Button -->
+            <a href="https://www.linkedin.com/in/david-noya-couselo-2848551a5" target="_blank">
+                <img src="linkedin5.1.png" alt="LinkedIn" class="linkedin-logo">
+            </a>
+        </div>
+    </header>
+
+    <section id="contacto">
+        <div class="container">
+            <h1 class="titulo-gris">Contact Me</h1>
+            <p>I am a resourceful person who dares to tackle any project. If you think I can help you, don't hesitate to contact me.</p>
+            <p>Contact me via my email: <a href="mailto:dnoyacouselo@gmail.com">dnoyacouselo@gmail.com</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 David Noya Couselo. All rights reserved.</p>
+    </footer>
+
+    <!-- Script para el menú hamburguesa -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

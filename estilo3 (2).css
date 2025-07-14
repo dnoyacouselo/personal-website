@@ -1,0 +1,685 @@
+body {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #666; /* Color gris claro para el texto */
+    background-color: #fff; /* Fondo blanco */
+}
+
+header {
+    background-color: #444;
+    padding: 10px 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding-bottom: 2px;
+}
+
+nav ul li a.active {
+    border-bottom: 2px solid #fff; /* Línea debajo del enlace activo */
+}
+
+/* Estilo específico para el enlace de LinkedIn */
+.linkedin-link {
+    position: absolute;
+    right: 0;
+    margin-right: 40px; /* Ajusta el espaciado desde el borde derecho */
+}
+
+.linkedin-logo {
+    width: 25px; /* Ajusta el tamaño del logo */
+    height: auto;
+    display: block;
+    background-color: transparent;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url('foto3.1.jpg'); /* Cambia esto a la URL de tu imagen */
+    background-size: cover; /* Asegura que la imagen se vea completa */
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro para mayor contraste */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center; /* Centra el texto */
+    padding-top: 350px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 0;
+    color: #fff; /* Cambia el color a gris oscuro */
+    font-family: inherit; /* Usa la misma fuente que el cuerpo del texto */
+    animation: fadeIn 2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.hero p {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #fff; /* Asegura que el color del párrafo sea gris oscuro */
+    opacity: 0;
+    animation: fadeInSub 2s ease-out forwards;
+    animation-delay: 1s; /* Retraso de 1 segundo para que aparezca después del título */
+}
+
+.btn {
+    background-color: #555;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    opacity: 0;
+    animation: fadeInButton 2s ease-out forwards;
+    animation-delay: 2s; /* Retraso de 2 segundos para que aparezca después del subtítulo */
+}
+
+@keyframes fadeInSub {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInButton {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+    background-color: #444;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+section {
+    padding: 60px 20px;
+    background-color: #fff; /* Fondo blanco para la sección */
+    color: #666; /* Color gris claro para el texto */
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Asegura que el subtítulo use la misma fuente */
+    font-weight: normal; /* Asegura que el subtítulo no esté en negrita */
+    color: #fff;
+}
+
+.profile-img {
+    max-width: 200px; /* Reduce el tamaño de la imagen */
+    height: auto;
+    margin: 20px 0;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666; /* Asegura que el color del párrafo sea gris claro */
+    text-align: center;
+}
+
+.titulo-gris {
+    color: #666; /* Color gris para el título "Sobre mí" */
+    font-size: 36px; /* Aumenta el tamaño de la fuente */
+    font-weight: normal;
+}
+
+.titulo-gris {
+    color: #666; /* Color gris para el título */
+    font-size: 42px; /* Tamaño de fuente más grande */
+    font-weight: normal;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#formacion .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.images {
+    display: flex;
+    margin: 20px 0;
+}
+
+.images .img-large {
+    width: 50%;
+    height: auto;
+}
+
+.education-list {
+    background-color: #2f2f2f; /* Fondo oscuro para la lista de educación */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.education-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.education-logo {
+    width: 250px; /* Tamaño más grande para las imágenes */
+    height: 200px;
+    margin-right: 15px;
+}
+
+.education-content {
+    flex: 1;
+}
+
+.education-item h2 {
+    color: #fff;
+    font-size: 24px;
+    margin: 0;
+}
+
+.education-date {
+    color: #bbb;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.education-item p {
+    color: #ccc;
+    margin: 5px 0;
+}
+
+.education-item p:first-of-type {
+    margin-top: 10px; /* Añade espacio entre el título y el texto */
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #444;
+    margin: 20px 0;
+}
+
+#experiencia .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.images {
+    display: flex;
+    margin: 20px 0;
+}
+
+.images .img-large {
+    width: 50%;
+    height: auto;
+}
+
+.experience-list {
+    background-color: #2f2f2f; /* Fondo oscuro para la lista de experiencia */
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.experience-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.experience-logo {
+    width: 200px; /* Asegura que las imágenes sean cuadradas */
+    height: 200px;
+    margin-right: 15px;
+    object-fit: cover; /* Asegura que la imagen ocupe todo el contenedor */
+}
+
+.experience-content {
+    flex: 1;
+    text-align: center; /* Alinea el texto a la izquierda */
+}
+
+.experience-item h2 {
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+}
+
+.experience-date {
+    color: #bbb;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+.experience-item ul {
+    list-style: none; /* Elimina los estilos de puntos por defecto */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    color: #ccc
+}
+
+.experience-item ul li {
+    position: relative; /* Permite posicionar el punto manualmente */
+    padding-left: 20px; /* Espacio para el punto personalizado */
+    margin-bottom: 10px;
+    text-align: center; /* Alinea el texto del elemento a la izquierda */
+    display: flex;
+    justify-content: center;
+}
+
+.experience-item ul li::before {
+    content: '•'; /* Punto personalizado */
+    position: absolute;
+    left: 0; /* Posiciona el punto a la izquierda del texto */
+    font-size: 24px; /* Tamaño del punto */
+    line-height: 1; /* Alinea verticalmente el punto con el texto */
+}
+
+.experience-item ul li {
+    margin-bottom: 10px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #444;
+    margin: 20px 0;
+}
+
+#contacto .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+#contacto p {
+    font-size: 18px; /* Tamaño de fuente para los párrafos */
+    line-height: 1.6; /* Espaciado entre líneas */
+    margin: 10px 0;
+}
+
+#contacto a {
+    color: #666; /* Color del enlace */
+    text-decoration: none; /* Quitar subrayado del enlace */
+}
+
+#contacto a:hover {
+    text-decoration: underline; /* Subrayar enlace al pasar el cursor */
+}
+
+footer {
+    background-color: #444;
+    text-align: center;
+    padding: 10px 0;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Proyectos - Sección general */
+#proyectos {
+    padding: 60px 20px;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+#proyectos .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#proyectos h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.project-item {
+    margin-bottom: 40px;
+}
+
+.project-item h3 {
+    font-size: 28px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.project-item p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.project-item embed {
+    display: block;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+}
+
+.project-item a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+
+.project-item a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para la imagen del dashboard */
+.dashboard-img {
+    display: block;
+    max-width: 50%;
+    margin: 20px auto;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.dashboard-img:hover {
+    transform: scale(1.05);
+}
+
+/* Media Query para móviles */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Tamaño de fuente más pequeño para móviles */
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .project-item, .experience-item, .education-item {
+        flex-direction: column; /* Coloca los elementos en columna */
+        align-items: center;
+        text-align: center;
+    }
+
+    .project-item img, .experience-item img, .education-item img {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .linkedin-link {
+        margin: 20px 0; /* Alinea el logo de LinkedIn */
+    }
+
+    .hero .overlay {
+        padding-top: 200px; /* Ajusta el padding para centrar el contenido */
+    }
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Esto previene el desplazamiento horizontal */
+}
+
+img, iframe, embed, object, video {
+    max-width: 100%;
+    height: auto;
+}
+
+.container, .project-item, .experience-item, .education-item {
+    max-width: 100%;
+    box-sizing: border-box; /* Asegura que el padding y border se incluyan en el ancho */
+}
+
+/* Estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Asegúrate de que la barra de navegación tenga suficiente altura y padding en dispositivos grandes */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    min-height: 60px; /* Altura mínima para evitar que se vea muy fina */
+}
+
+/* Estilos para los enlaces de navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding-bottom: 2px;
+}
+
+nav ul li a.active {
+    border-bottom: 2px solid #fff; /* Línea debajo del enlace activo */
+}
+
+/* Botón de menú hamburguesa oculto en pantallas grandes */
+.hamburger-menu {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    color: #fff;
+}
+
+/* Contenedor para el botón de idioma y LinkedIn */
+.top-right-container {
+    position: absolute;
+    top: 20px;
+    right: 60px; /* Deja espacio para el menú hamburguesa */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.language-button {
+    background-color: #555;
+    color: #fff;
+    border: 1px solid #444;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.language-button:hover {
+    background-color: #444;
+    border-color: #333;
+}
+
+.linkedin-logo {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+    /* Mostrar el menú hamburguesa */
+    .hamburger-menu {
+        display: block;
+    }
+
+    /* Ocultar el menú de navegación por defecto */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #444;
+        position: absolute;
+        top: 60px; /* Debajo del header */
+        left: 0;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+    }
+
+    /* Mostrar el menú cuando tenga la clase 'active' */
+    nav ul.active {
+        display: flex;
+    }
+
+    /* Ajustar los enlaces dentro del menú desplegable */
+    nav ul li a {
+        padding: 15px 0;
+        font-size: 18px;
+        border-bottom: 1px solid #555;
+    }
+
+    /* Ajustar el contenedor superior en móviles */
+    .top-right-container {
+        position: absolute;
+        top: 60px; /* Debajo del menú desplegable */
+        right: 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Asegurar que el botón de idioma y LinkedIn sean visibles y accesibles */
+    .language-button {
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+
+    .linkedin-logo {
+        width: 36px;
+        height: 36px;
+    }
+
+    /* Ajustar la altura del header para que no se vea muy fina en móviles */
+    header {
+        padding: 15px 0;
+    }
+
+    /* Aumentar el padding de la barra de navegación para mayor altura */
+    nav {
+        min-height: 70px;
+    }
+}
+
+/* Responsividad adicional para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .language-button {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+
+    .linkedin-logo {
+        width: 32px;
+        height: 32px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+/* Estilos específicos para el contenedor de "Sobre mí" */
+.sobre-mi-container {
+    max-width: 800px;      /* Ajusta el ancho máximo según tus preferencias */
+    margin: 0 auto;        /* Centra el contenedor horizontalmente */
+    padding: 20px;         /* Añade espacio interno */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+    text-align: center;    /* Centra el texto dentro del contenedor */
+}
+/* Estilos específicos para PDFs embebidos */
+#proyectos iframe,
+#proyectos object,
+#proyectos embed,
+#proyectos canvas {
+    width: 100%;
+    height: 800px; /* Aumenta la altura según tus necesidades */
+    border: none; /* Opcional: elimina el borde predeterminado */
+}

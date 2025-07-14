@@ -9,19 +9,27 @@
 <body>
     <header>
         <nav>
-            <ul>
+            <ul id="menu">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="sobremi.html">Sobre mí</a></li>
                 <li><a href="formacion.html">Formación</a></li>
                 <li><a href="experiencia.html">Experiencia</a></li>
                 <li><a href="proyectos.html">Proyectos</a></li>
                 <li><a href="contacto.html" class="active">Contáctame</a></li>
-                <li class="linkedin-link">
-                    <a href="https://www.linkedin.com/in/david-noya-couselo-2848551a5" target="_blank">
-                        <img src="linkedin5.1.png" alt="LinkedIn" class="linkedin-logo">
-                    </a>
+                <!-- Eliminado el logo de LinkedIn del menú -->
             </ul>
+            <div class="hamburger-menu" onclick="toggleMenu()">&#9776;</div>
         </nav>
+
+        <!-- Contenedor del botón de idioma y LinkedIn -->
+        <div class="top-right-container">
+            <!-- Botón de cambio de idioma -->
+            <a href="contacto_en.html" class="language-button">English</a>
+            <!-- Botón de LinkedIn -->
+            <a href="https://www.linkedin.com/in/david-noya-couselo-2848551a5" target="_blank">
+                <img src="linkedin5.1.png" alt="LinkedIn" class="linkedin-logo">
+            </a>
+        </div>
     </header>
 
     <section id="contacto">
@@ -35,5 +43,13 @@
     <footer>
         <p>&copy; 2024 David Noya Couselo. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Script para el menú hamburguesa -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
