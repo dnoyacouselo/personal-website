@@ -905,3 +905,81 @@ nav{
         padding:1rem 0;
     }
 }
+
+/* =========================================================
+   AJUSTE RESPONSIVE EXTRA (≤ 640 px)
+   ========================================================= */
+
+@media (max-width: 640px){
+
+  /* ---------- A) HERO : cabecera+botones más compactos ---------- */
+
+  .hero{
+      height: 100vh;
+      background-size: cover;
+      padding: 0 1rem;              /* menos margen lateral           */
+  }
+
+  /* overlay = contenedor de ENGLISH + LinkedIn */
+  .hero .overlay{
+      padding: 2rem 1rem;           /* antes 4rem – lo hacemos +fino  */
+  }
+
+  /* Botón idioma  + icono social centrados y pegados            */
+  .hero .overlay .btn,
+  .hero .overlay .social-link{
+      margin: .5rem auto;           /* (antes 1-1.5 rem)              */
+  }
+
+  /* ---------- B) BARRA DE NAVEGACIÓN (hamburguesa) ---------- */
+
+  nav{
+      padding: .4rem 1rem;          /* alto total + bajito            */
+  }
+  .hamburger-menu{
+      font-size: 1.6rem;            /* icono algo menor               */
+      padding: .25rem .4rem;
+  }
+
+  /* dropdown más fino */
+  #menu{
+      padding: .5rem 0;
+  }
+  #menu li a{
+      padding: .8rem 0;             /* líneas menos altas             */
+  }
+
+  /* ---------- C) SECCIONES GENERALES  (Experiencia…) ---------- */
+
+  /* contenedor genérico de sección */
+  .section{
+      padding: 3rem 1rem;           /* estrecha márgenes horizontales */
+  }
+
+  /* título “Experiencia / Educación / Skills …” */
+  .section-title{
+      font-size: clamp(1.75rem, 7vw, 2.25rem); /* más pequeño           */
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+  }
+
+  /* párrafos y listas dentro de la sección */
+  .section p,
+  .section li{
+      font-size: clamp(.9rem, 4.2vw, 1.05rem);
+      line-height: 1.5;
+  }
+
+  /* ---------- D) TARJETAS / DASHBOARD / MOCKUPS ---------- */
+
+  .project-item iframe,
+  .project-item .dashboard-img{
+      aspect-ratio: 4 / 3;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(15,23,42,.15);
+  }
+}
+/* =========================================================
+   FIN DE ESTILO RESPONSIVE
+   ========================================================= */
+}
