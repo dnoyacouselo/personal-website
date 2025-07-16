@@ -1095,4 +1095,18 @@ nav{
     height: auto !important;
     font-size: 1.6rem !important;       /* en caso de que sea un font‑icon */
   }
+  /* Ajusta estos selectores a tus IDs o clases reales si son distintos */
+  section#formacion p,
+  section#formacion li,
+  section#experiencia p,
+  section#experiencia li,
+  section#proyectos p,
+  section#proyectos li,
+  section#contacto p,
+  section#contacto li {
+    /* Mismo tamaño que usas en Sobre mí */
+    font-size: clamp(0.85rem, 4vw, 1rem) !important;
+    line-height: 1.4 !important;
+    text-align: left !important;    /* deja el texto alineado a la izquierda */
+  }
 }
