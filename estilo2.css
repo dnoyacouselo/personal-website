@@ -1068,4 +1068,31 @@ nav{
   .top-right-container a[href*="linkedin.com"] {
     margin: 0 !important;
   }
+  .hero .overlay {
+    display: flex !important;           /* fila en lugar de columna */
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;             /* hueco estrecho entre ellos */
+  }
+
+  /* Quita márgenes que los apilaban */
+  .hero .overlay .btn,
+  .hero .overlay .social-link {
+    margin: 0 !important;
+  }
+
+  /* Achica el botón “English” */
+  .hero .overlay .btn {
+    padding: 0.4rem 0.8rem !important;
+    font-size: clamp(0.9rem, 4vw, 1.1rem) !important;
+  }
+
+  /* Achica el icono de LinkedIn */
+  .hero .overlay .social-link img,
+  .hero .overlay .social-link i {
+    width: 1.6rem !important;
+    height: auto !important;
+    font-size: 1.6rem !important;       /* en caso de que sea un font‑icon */
+  }
 }
