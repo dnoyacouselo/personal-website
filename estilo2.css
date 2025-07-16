@@ -845,3 +845,63 @@ img:not([src]) {
         box-shadow:0 6px 20px rgba(15,23,42,.15);
     }
 }
+
+/* =========================================================
+   NAVEGACIÓN RESPONSIVE  –  MENÚ HAMBURGUESA
+   ========================================================= */
+
+/* 1) Estilo base del menú y del botón -------------------- */
+nav{
+    position:relative;                 /* para posicionar el dropdown   */
+}
+
+#menu{
+    display:flex;
+    gap:2rem;
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+/* Icono hamburguesa (☰) oculto en escritorio */
+.hamburger-menu{
+    display:none;                      /* se mostrará sólo en móvil     */
+    font-size:2rem;
+    cursor:pointer;
+    user-select:none;
+}
+
+/* 2) Breakpoint – pantallas < 768 px ---------------------- */
+@media (max-width:768px){
+
+    /* Oculta la lista por defecto */
+    #menu{
+        display:none;                  /* se mostrará al activar */
+        flex-direction:column;
+        position:absolute;
+        top:100%;                      /* justo bajo <nav>       */
+        left:0;
+        width:100%;
+        background:rgba(15,23,42,.96); /* fondo oscuro y opacidad */
+        padding:1rem 0;
+        text-align:center;
+        z-index:10;
+    }
+
+    /* Enséñala cuando JS añade .active */
+    #menu.active{
+        display:flex;
+    }
+
+    /* Muestra el botón hamburguesa */
+    .hamburger-menu{
+        display:block;
+        color:var(--text-primary, #fff);
+    }
+
+    /* Ajusta cada enlace para que no queden pegados */
+    #menu li a{
+        display:block;
+        padding:1rem 0;
+    }
+}
