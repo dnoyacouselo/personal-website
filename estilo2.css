@@ -1111,11 +1111,13 @@ nav{
   }
 
   /* ─── TÍTULOS INDIVIDUALES DE TRABAJO, EDUCACIÓN Y PROYECTOS ─── */
-  section#experiencia h3,
-  section#educacion h3,
+  section#experiencia h1,
+  section#educacion h2,
   section#proyectos h3 {
-    font-size: clamp(1rem, 3.5vw, 1.25rem) !important;
-    line-height: 1.2 !important;
-    margin-bottom: 0.75rem !important;
+    font-size: clamp(1.25rem, 4vw, 1.5rem) !important;  /* tamaño intermedio */
+    font-weight: 600 !important;                        /* un poco más de grosor */
+    line-height: 1.2 !important;                        /* compacto pero legible */
+    margin-bottom: 0.75rem !important;                  /* espacio tras el título */
+    color: var(--text-primary) !important;   
   }
 }
