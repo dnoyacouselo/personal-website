@@ -1109,15 +1109,22 @@ nav{
     line-height: 1.4 !important;
     text-align: left !important;    /* deja el texto alineado a la izquierda */
   }
+  section#experiencia,
+  section#educacion,
+  section#proyectos {
+    /* antes tenías padding: 3rem 1rem; 
+       ahora reducimos a 0.5rem para ganar ancho */
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
 
-  /* ─── TÍTULOS INDIVIDUALES DE TRABAJO, EDUCACIÓN Y PROYECTOS ─── */
-  section#experiencia h1,
-  section#educacion h2,
-  section#proyectos h3 {
-    font-size: clamp(1.25rem, 4vw, 1.5rem) !important;  /* tamaño intermedio */
-    font-weight: 600 !important;                        /* un poco más de grosor */
-    line-height: 1.2 !important;                        /* compacto pero legible */
-    margin-bottom: 0.75rem !important;                  /* espacio tras el título */
-    color: var(--text-primary) !important;   
+  /* Si además tienes un .container o .wrapper dentro de cada sección, 
+     asegúrate de que no limite el ancho: */
+  section#experiencia .container,
+  section#educacion .container,
+  section#proyectos .container {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }
