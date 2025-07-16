@@ -982,4 +982,61 @@ nav{
 /* =========================================================
    FIN DE ESTILO RESPONSIVE
    ========================================================= */
+   /* ================  MOBILE TWEAKS  ≤ 640 px  ================ */
+@media (max-width:640px){
+
+  /* ---------- HEADER / NAV  ---------- */
+  header{                /* contenedor del logo + botones */
+      padding:.4rem 1rem;
+  }
+  .hamburger-menu{
+      font-size:1.6rem;
+      padding:.25rem .4rem;
+  }
+  nav ul{
+      padding:.4rem 0;   /* lista desplegable más fina    */
+  }
+  nav ul li a{
+      padding:.7rem 0;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+      height:100vh;
+      background-size:cover;
+      padding:0 1rem;
+  }
+  .hero .overlay{
+      padding:2rem 1rem;         /* menos alto */
+  }
+  .hero h1{
+      font-size:clamp(2rem,8vw,3rem);
+  }
+  .hero p{
+      font-size:clamp(.95rem,4.5vw,1.2rem);
+      margin-bottom:2rem;
+  }
+
+  /* ---------- SECCIONES (Experiencia, Educación, etc.) ---------- */
+  section{                       /* cualquier <section> */
+      padding:3rem 1rem;         /* márgenes laterales más finos */
+  }
+  section h2{                    /* títulos de sección */
+      font-size:clamp(1.6rem,7vw,2.2rem);
+      line-height:1.15;
+      margin-bottom:1.2rem;
+  }
+  section p,
+  section li{
+      font-size:clamp(.9rem,4.2vw,1.05rem);
+      line-height:1.5;
+  }
+
+  /* ---------- PROYECTOS / DASHBOARD ---------- */
+  .project-item iframe,
+  .project-item img{
+      aspect-ratio:4/3;
+      border-radius:12px;
+      box-shadow:0 6px 20px rgba(15,23,42,.15);
+  }
 }
