@@ -1109,4 +1109,31 @@ nav{
     line-height: 1.4 !important;
     text-align: left !important;    /* deja el texto alineado a la izquierda */
   }
+  .hero .overlay {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;    /* ⬅️ CENTRA VERTICALMENTE */
+    justify-content: center !important;
+    gap: 0.5rem !important;
+  }
+
+  /* Tanto el .btn como el .social-link serán flex-items alineados */
+  .hero .overlay .btn,
+  .hero .overlay .social-link {
+    display: inline-flex !important;
+    align-items: center !important;    /* ⬅️ MISMO CENTRADO */
+    justify-content: center !important;
+    margin: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    line-height: 1 !important;
+  }
+
+  /* Quita cualquier baseline-shift de la imagen */
+  .hero .overlay .social-link img {
+    display: block !important;
+    vertical-align: middle !important;
+    height: 1.6rem !important;         /* hazlo del mismo alto que el btn */
+    width: auto !important;
+  }
 }
