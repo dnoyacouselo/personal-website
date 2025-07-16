@@ -1056,4 +1056,16 @@ nav{
   section#experiencia li {
     text-align: left !important;
   }
+  .top-right-container {
+    display: flex !important;        /* pasa a flex-row */
+    align-items: center;             /* alinea icono y botón */
+    justify-content: center;         /* centra el conjunto */
+    gap: 0.5rem;                     /* espacio reducido entre ellos */
+  }
+
+  /* Quita márgenes que los apilaban */
+  .top-right-container .language-button,
+  .top-right-container a[href*="linkedin.com"] {
+    margin: 0 !important;
+  }
 }
