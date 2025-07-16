@@ -1039,4 +1039,21 @@ nav{
       border-radius:12px;
       box-shadow:0 6px 20px rgba(15,23,42,.15);
   }
+  .hero .overlay {
+    display: flex;               /* de columna a fila */
+    justify-content: center;     /* centrar horizontal */
+    gap: 1rem;                   /* espacio entre ambos */
+    flex-wrap: wrap;             /* por si cabe muy justo */
+  }
+  .hero .overlay .btn,
+  .hero .overlay .social-link {
+    margin: 0 !important;        /* eliminamos el margin auto */
+  }
+
+  /* 2) Texto de la sección “Experiencia” alineado a la izquierda */
+  /* Si quieres sólo en esa sección, sustituye `section` por `#experiencia` */
+  section#experiencia p,
+  section#experiencia li {
+    text-align: left !important;
+  }
 }
