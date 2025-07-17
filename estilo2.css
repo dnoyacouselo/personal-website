@@ -995,6 +995,16 @@ nav{
     section#proyectos p {
         text-align: center !important;
     }
+    section#formacion p, section#experiencia p, section#proyectos p,
+    section#formacion li, section#experiencia li, section#proyectos li {
+        text-align: center !important;  /* Fuerza centrado en móvil */
+    }
+
+    /* Ajustes adicionales para clases comunes en tus secciones */
+    .education-item p, .experience-item p, .project-item p,
+    .education-item li, .experience-item li, .project-item li {
+        text-align: center !important;
+    }
 }
 
 /* =========================================================
@@ -1250,5 +1260,9 @@ nav{
     .project-item p, .project-item ul li {
         text-align: center !important;
         /*font-size: clamp(0.85rem, 4vw, 1rem) !important;  Tamaño responsivo con centrado */
+    }
+    section#formacion p, section#experiencia p, section#proyectos p,
+    section#formacion li, section#experiencia li, section#proyectos li {
+        text-align: center !important;
     }
 }
