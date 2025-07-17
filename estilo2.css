@@ -904,6 +904,49 @@ nav{
         display:block;
         padding:1rem 0;
     }
+    .top-right-container {
+        flex-direction: row !important; /* Cambia de column a row */
+        gap: 0.5rem !important; /* Espacio reducido entre elementos */
+        position: absolute !important; /* Vuelve a posicionar para alinear con hamburguesa */
+        top: 50% !important;
+        right: 4rem !important; /* Ajusta posición para dejar espacio al hamburguesa */
+        transform: translateY(-50%) !important;
+        margin-top: 0 !important;
+        padding: 0 !important;
+        background: none !important;
+        border-top: none !important;
+    }
+
+    /* Ajustar hamburguesa para que quepa en la misma línea */
+    .hamburger-menu {
+        position: absolute !important;
+        right: 1rem !important; /* Posición ajustada */
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        font-size: 1.6rem !important; /* Tamaño reducido */
+        padding: 0.25rem 0.5rem !important; /* Padding más fino */
+    }
+
+    /* Hacer el menú desplegable más fino */
+    #menu.active {
+        padding: 0.5rem 0 !important; /* Padding vertical reducido */
+        background: rgba(15, 23, 42, 0.9) !important; /* Fondo más ligero */
+    }
+
+    #menu li a {
+        padding: 0.8rem 0 !important; /* Padding de items más fino para pestañas delgadas */
+        font-size: 13px !important; /* Tamaño de texto reducido */
+    }
+
+    /* Hacer la barra superior más delgada */
+    header {
+        padding: 0.5rem 0 !important; /* Padding reducido */
+    }
+
+    nav {
+        min-height: 60px !important; /* Altura mínima más baja (antes 90px) */
+        padding: 0 1rem !important;
+    }
 }
 
 /* =========================================================
@@ -1127,4 +1170,17 @@ nav{
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
+  .top-right-container {
+        right: 3.5rem !important; /* Ajuste fino para espacio */
+        gap: 0.3rem !important;
+    }
+
+    .hamburger-menu {
+        font-size: 1.4rem !important;
+        right: 0.5rem !important;
+    }
+
+    nav {
+        min-height: 50px !important; /* Aún más delgada en móviles pequeños */
+    }
 }
