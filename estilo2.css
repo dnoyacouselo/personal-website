@@ -965,6 +965,21 @@ nav{
         display: block !important; /* Asegura que sea un bloque centrado */
         margin: 0 auto 1rem auto !important; /* Espacio y centrado */
     }
+    /* Centrar texto en párrafos, listas, títulos y otros elementos comunes */
+    body, p, li, h1, h2, h3, section, .hero p, .education-item p, .experience-item p, .project-item p, .education-date, .experience-date {
+        text-align: center !important; /* Fuerza el centrado horizontal de todo el texto */
+    }
+
+    /* Ajustes específicos para listas en experiencia y otros para mantener legibilidad */
+    .experience-item ul li, .education-item ul li {
+        text-align: center !important; /* Centra items de listas */
+        padding-left: 0 !important; /* Elimina padding izquierdo para centrado simétrico */
+    }
+
+    /* Centrar descripciones y contenidos en secciones */
+    .education-content, .experience-content, .project-content {
+        text-align: center !important;
+    }
 }
 
 /* =========================================================
@@ -1213,5 +1228,10 @@ nav{
     /* Fechas centradas con más espacio en pantallas pequeñas */
     .experience-date, .education-date {
         font-size: 12px !important; /* Tamaño reducido para encajar mejor */
+    }
+    /* Ajustes finos para mantener centrado en móviles pequeños */
+    p, li, h1, h2, h3 {
+        text-align: center !important;
+        font-size: clamp(0.85rem, 4vw, 1rem) !important; /* Mantiene tamaño responsivo con centrado */
     }
 }
