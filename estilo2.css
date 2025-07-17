@@ -1230,4 +1230,10 @@ nav{
     .experience-date, .education-date {
         font-size: 12px !important; /* Tamaño reducido para encajar mejor */
     }
+    .experience-item p, .experience-item ul li,
+    .education-item p, .education-item ul li,
+    .project-item p, .project-item ul li {
+        text-align: center !important;
+        /*font-size: clamp(0.85rem, 4vw, 1rem) !important;  Tamaño responsivo con centrado */
+    }
 }
