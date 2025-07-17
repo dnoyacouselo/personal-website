@@ -1005,6 +1005,19 @@ nav{
     .education-item li, .experience-item li, .project-item li {
         text-align: center !important;
     }
+    section#contacto p,
+    section#contacto li {
+        text-align: center !important;  /* Fuerza centrado en móvil */
+    }
+    .experience-item ul li::before {
+        content: none !important;  /* Quita el '◦' en móvil */
+    }
+
+    /* Ajuste opcional para listas sin bullets, manteniendo alineación */
+    .experience-item ul li {
+        padding-left: 0 !important;  /* Elimina padding izquierdo para evitar espacios vacíos */
+        text-align: left !important;  /* Mantiene alineación izquierda si es necesario, o cambia a center si prefieres */
+    }
 }
 
 /* =========================================================
@@ -1264,5 +1277,13 @@ nav{
     section#formacion p, section#experiencia p, section#proyectos p,
     section#formacion li, section#experiencia li, section#proyectos li {
         text-align: center !important;
+    }
+    section#contacto p,
+    section#contacto li {
+        text-align: center !important;
+    }
+    .experience-item ul li {
+        padding-left: 0 !important;
+        margin-bottom: 1rem !important;  /* Espacio entre items para mejor legibilidad sin bullets */
     }
 }
