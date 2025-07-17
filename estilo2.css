@@ -1217,10 +1217,6 @@ nav{
         min-height: 50px !important; /* Aún más delgada en móviles pequeños */
     }
     /* Ajustes finos para mantener centrado en móviles pequeños */
-    p, li, h1, h2, h3 {
-        text-align: center !important;
-        font-size: clamp(0.85rem, 4vw, 1rem) !important; /* Mantiene tamaño responsivo con centrado */
-    }
     .hero p {
         font-size: clamp(1rem, 4vw, 1.25rem) !important; /* Reduce ligeramente el tamaño si es necesario */
     }
