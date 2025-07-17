@@ -947,24 +947,6 @@ nav{
         min-height: 60px !important; /* Altura mínima más baja (antes 90px) */
         padding: 0 1rem !important;
     }
-    .hero p {
-        text-align: center !important; /* Alinea al centro en móvil */
-        margin: 0 auto !important; /* Centra el bloque */
-        max-width: 90% !important; /* Evita que se desborde */
-    }
-
-    /* Reducir tamaño de títulos en Experiencia, Formación y Proyectos */
-    section h2, .experience-item h2, .education-item h2, .project-item h3 {
-        font-size: clamp(1.6rem, 5vw, 2.2rem) !important; /* Tamaño más pequeño y responsivo para móviles */
-        line-height: 1.2 !important; /* Mejora la legibilidad */
-    }
-
-    /* Centrar fechas en Experiencia y Formación */
-    .experience-date, .education-date {
-        text-align: center !important; /* Alinea al centro */
-        display: block !important; /* Asegura que sea un bloque centrado */
-        margin: 0 auto 1rem auto !important; /* Espacio y centrado */
-    }
     /* Centrar texto en párrafos, listas, títulos y otros elementos comunes */
     body, p, li, h1, h2, h3, section, .hero p, .education-item p, .experience-item p, .project-item p, .education-date, .experience-date {
         text-align: center !important; /* Fuerza el centrado horizontal de todo el texto */
@@ -1215,19 +1197,6 @@ nav{
 
     nav {
         min-height: 50px !important; /* Aún más delgada en móviles pequeños */
-    }
-    .hero p {
-        font-size: clamp(1rem, 4vw, 1.25rem) !important; /* Reduce ligeramente el tamaño si es necesario */
-    }
-
-    /* Títulos aún más compactos en móviles pequeños */
-    section h2, .experience-item h2, .education-item h2, .project-item h3 {
-        font-size: clamp(1.4rem, 4.5vw, 2rem) !important;
-    }
-
-    /* Fechas centradas con más espacio en pantallas pequeñas */
-    .experience-date, .education-date {
-        font-size: 12px !important; /* Tamaño reducido para encajar mejor */
     }
     /* Ajustes finos para mantener centrado en móviles pequeños */
     p, li, h1, h2, h3 {
