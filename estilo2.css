@@ -990,6 +990,11 @@ nav{
     .experience-date, .education-date {
         text-align: center !important; /* Mantiene fechas centradas como en ajustes previos */
     }
+    section#formacion p,
+    section#experiencia p,
+    section#proyectos p {
+        text-align: center !important;
+    }
 }
 
 /* =========================================================
