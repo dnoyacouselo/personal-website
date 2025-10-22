@@ -245,7 +245,7 @@ nav ul li a.active {
     font-weight: 300;
     letter-spacing: -0.02em;
     animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s both;
-    color: var(--charcoal);
+    color: var(--text-secondary);
     line-height: 1.4;
 }
 
@@ -654,8 +654,18 @@ footer a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    header {
+        padding: 0.75rem 0;
+    }
+
+    nav {
+        min-height: 72px;
+        padding: 0 1.5rem;
+    }
+
     .hamburger-menu {
         display: block;
+        font-size: 1.8rem;
     }
 
     nav ul {
@@ -664,12 +674,13 @@ footer a:hover {
         width: 100%;
         background: var(--secondary-blue);
         position: absolute;
-        top: 100%;
+        top: calc(100% + 0.5rem);
         left: 0;
         box-shadow: 0 8px 32px rgba(15, 23, 42, 0.25);
         z-index: 1000;
-        padding: 2rem 0;
-        border-top: 1px solid var(--border-color);
+        padding: 1rem 0;
+        border-radius: 14px;
+        border: 1px solid rgba(148, 163, 184, 0.18);
         backdrop-filter: blur(20px);
     }
 
@@ -684,73 +695,100 @@ footer a:hover {
 
     nav ul li a {
         display: block;
-        padding: 1.5rem;
+        padding: 1rem;
         border-radius: 0;
-        font-size: 14px;
+        font-size: 0.875rem;
+        letter-spacing: 0.08em;
     }
 
     .top-right-container {
         position: static;
         transform: none;
+        width: 100%;
         flex-direction: column;
-        gap: 1.5rem;
-        margin-top: 2rem;
-        padding: 2rem;
-        background: rgba(148, 163, 184, 0.08);
-        border-top: 1px solid var(--border-color);
-        backdrop-filter: blur(20px);
+        align-items: stretch;
+        gap: 0.75rem;
+        margin: 1rem auto 0;
+        padding: 0.75rem 1rem;
+        background: rgba(148, 163, 184, 0.1);
+        border: 1px solid rgba(148, 163, 184, 0.18);
+        border-radius: 16px;
+    }
+
+    .language-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .top-right-container .linkedin-logo {
+        width: 44px;
+        height: 44px;
+    }
+
+    section {
+        padding: 4rem 1.5rem;
+    }
+
+    .container, .sobre-mi-container {
+        padding: 0 1.25rem;
+    }
+
+    .education-list, .experience-list {
+        padding: 2.25rem;
     }
 
     .education-item, .experience-item {
         flex-direction: column;
-        text-align: center;
+        gap: 1.5rem;
+        text-align: left;
+        padding: 2rem;
+    }
+
+    .project-content {
         padding: 2.5rem;
+        text-align: left;
+    }
+
+    .project-item h3,
+    .project-item p {
+        text-align: left;
+    }
+
+    .project-item a {
+        width: 100%;
+        text-align: center;
     }
 
     .education-logo, .experience-logo {
-        margin: 0 auto 2rem auto;
-        width: 160px;
-        height: 160px;
+        margin: 0;
+        width: 120px;
+        height: 120px;
     }
 
-    .education-item h2, .experience-item h2 {
-        text-align: center;
-    }
-
-    .education-item p, .experience-item p {
-        text-align: center;
+    .education-item h2, .experience-item h2,
+    .education-item p, .experience-item p,
+    .experience-item ul li {
+        text-align: left;
     }
 
     .experience-item ul li {
-        text-align: center;
+        padding-left: 1.5rem;
     }
 
     .images {
         flex-direction: column;
-        align-items: center;
-        gap: 2.5rem;
+        align-items: stretch;
+        gap: 1.5rem;
     }
 
     .img-large {
-        width: 100%;
-        height: 280px;
-    }
-
-    section {
-        padding: 5rem 1.5rem;
-    }
-
-    .container, .sobre-mi-container {
-        padding: 0 1rem;
-    }
-
-    .education-list, .experience-list {
-        padding: 2.5rem;
+        height: 240px;
+        border-radius: 16px;
     }
 
     .profile-img {
-        width: 280px;
-        height: 280px;
+        width: 240px;
+        height: 240px;
     }
 }
 
@@ -798,6 +836,9 @@ a:focus, button:focus {
 
 /* Loading animation for images */
 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
     transition: opacity 0.3s ease;
 }
 
@@ -817,33 +858,6 @@ img:not([src]) {
     .experience-item:nth-child(3) { animation-delay: 0.2s; }
     .project-item:nth-child(2) { animation-delay: 0.1s; }
     .project-item:nth-child(3) { animation-delay: 0.2s; }
-}
-
-@media (max-width:640px){
-
-    /* HERO: ocupa la pantalla sin dejar barras blancas */
-    .hero{
-        height:100vh;
-        background-size:cover;            /* sin zoom‑out en pantallas chicas */
-        padding:0 1rem;                   /* un respiro lateral para el texto */
-    }
-
-    .hero h1{
-        font-size:clamp(2rem,8vw,3rem);   /* título más compacto             */
-    }
-
-    .hero p{
-        font-size:clamp(1rem,4.5vw,1.25rem);
-        margin-bottom:2rem;
-    }
-
-    /* DASHBOARD: ratio más cuadrado y radios menores   */
-    .project-item iframe,
-    .project-item .dashboard-img{
-        aspect-ratio:4/3;
-        border-radius:12px;
-        box-shadow:0 6px 20px rgba(15,23,42,.15);
-    }
 }
 
 /* =========================================================
@@ -876,16 +890,17 @@ nav{
 
     /* Oculta la lista por defecto */
     #menu{
-        display:none;                  /* se mostrará al activar */
+        display:none;
         flex-direction:column;
         position:absolute;
-        top:100%;                      /* justo bajo <nav>       */
+        top:calc(100% + 0.5rem);
         left:0;
         width:100%;
-        background:rgba(15,23,42,.96); /* fondo oscuro y opacidad */
+        background:rgba(15,23,42,0.94);
         padding:1rem 0;
         text-align:center;
-        z-index:10;
+        border-radius:14px;
+        border:1px solid rgba(148,163,184,0.18);
     }
 
     /* Enséñala cuando JS añade .active */
@@ -896,127 +911,13 @@ nav{
     /* Muestra el botón hamburguesa */
     .hamburger-menu{
         display:block;
-        color:var(--text-primary, #fff);
+        color:var(--text-secondary);
     }
 
     /* Ajusta cada enlace para que no queden pegados */
     #menu li a{
         display:block;
-        padding:1rem 0;
-    }
-    .top-right-container {
-        flex-direction: row !important; /* Cambia de column a row */
-        gap: 0.5rem !important; /* Espacio reducido entre elementos */
-        position: absolute !important; /* Vuelve a posicionar para alinear con hamburguesa */
-        top: 50% !important;
-        right: 4rem !important; /* Ajusta posición para dejar espacio al hamburguesa */
-        transform: translateY(-50%) !important;
-        margin-top: 0 !important;
-        padding: 0 !important;
-        background: none !important;
-        border-top: none !important;
-    }
-
-    /* Ajustar hamburguesa para que quepa en la misma línea */
-    .hamburger-menu {
-        position: absolute !important;
-        right: 1rem !important; /* Posición ajustada */
-        top: 50% !important;
-        transform: translateY(-50%) !important;
-        font-size: 1.6rem !important; /* Tamaño reducido */
-        padding: 0.25rem 0.5rem !important; /* Padding más fino */
-    }
-
-    /* Hacer el menú desplegable más fino */
-    #menu.active {
-        padding: 0.5rem 0 !important; /* Padding vertical reducido */
-        background: rgba(15, 23, 42, 0.9) !important; /* Fondo más ligero */
-    }
-
-    #menu li a {
-        padding: 0.8rem 0 !important; /* Padding de items más fino para pestañas delgadas */
-        font-size: 13px !important; /* Tamaño de texto reducido */
-    }
-
-    /* Hacer la barra superior más delgada */
-    header {
-        padding: 0.5rem 0 !important; /* Padding reducido */
-    }
-
-    nav {
-        min-height: 60px !important; /* Altura mínima más baja (antes 90px) */
-        padding: 0 1rem !important;
-    }
-    /* Centrar texto en párrafos, listas, títulos y otros elementos comunes */
-    body, p, li, h1, h2, h3, section, .hero p, .education-item p, .experience-item p, .project-item p, .education-date, .experience-date {
-        text-align: center !important; /* Fuerza el centrado horizontal de todo el texto */
-    }
-
-    /* Ajustes específicos para listas en experiencia y otros para mantener legibilidad */
-    .experience-item ul li, .education-item ul li {
-        text-align: center !important; /* Centra items de listas */
-        padding-left: 0 !important; /* Elimina padding izquierdo para centrado simétrico */
-    }
-
-    /* Centrar descripciones y contenidos en secciones */
-    .education-content, .experience-content, .project-content {
-        text-align: center !important;
-    }
-    .hero p {
-        text-align: center !important; /* Alinea al centro en móvil */
-        margin: 0 auto !important; /* Centra el bloque */
-        max-width: 90% !important; /* Evita que se desborde */
-    }
-
-    /* Reducir tamaño de títulos en Experiencia, Formación y Proyectos */
-    section h2, .experience-item h2, .education-item h2, .project-item h3 {
-        font-size: clamp(1.6rem, 5vw, 2.2rem) !important; /* Tamaño más pequeño y responsivo para móviles */
-        line-height: 1.2 !important; /* Mejora la legibilidad */
-    }
-
-    /* Centrar fechas en Experiencia y Formación */
-    .experience-date, .education-date {
-        text-align: center !important; /* Alinea al centro */
-        display: block !important; /* Asegura que sea un bloque centrado */
-        margin: 0 auto 1rem auto !important; /* Espacio y centrado */
-    }
-    .experience-item p, .experience-item ul li,
-    .education-item p, .education-item ul li,
-    .project-item p, .project-item ul li {
-        text-align: center !important; /* Centra el texto principal en cada apartado */
-    }
-
-    /* Ajustes para fechas y otros elementos si es necesario, pero manteniendo solo textos principales centrados */
-    .experience-date, .education-date {
-        text-align: center !important; /* Mantiene fechas centradas como en ajustes previos */
-    }
-    section#formacion p,
-    section#experiencia p,
-    section#proyectos p {
-        text-align: center !important;
-    }
-    section#formacion p, section#experiencia p, section#proyectos p,
-    section#formacion li, section#experiencia li, section#proyectos li {
-        text-align: center !important;  /* Fuerza centrado en móvil */
-    }
-
-    /* Ajustes adicionales para clases comunes en tus secciones */
-    .education-item p, .experience-item p, .project-item p,
-    .education-item li, .experience-item li, .project-item li {
-        text-align: center !important;
-    }
-    section#contacto p,
-    section#contacto li {
-        text-align: center !important;  /* Fuerza centrado en móvil */
-    }
-    .experience-item ul li::before {
-        content: none !important;  /* Quita el '◦' en móvil */
-    }
-
-    /* Ajuste opcional para listas sin bullets, manteniendo alineación */
-    .experience-item ul li {
-        padding-left: 0 !important;  /* Elimina padding izquierdo para evitar espacios vacíos */
-        text-align: left !important;  /* Mantiene alineación izquierda si es necesario, o cambia a center si prefieres */
+        padding:1rem;
     }
 }
 
@@ -1096,194 +997,128 @@ nav{
 /* =========================================================
    FIN DE ESTILO RESPONSIVE
    ========================================================= */
-   /* ================  MOBILE TWEAKS  ≤ 640 px  ================ */
+
+/* ================  MOBILE TWEAKS  ≤ 640 px  ================ */
 @media (max-width:640px){
 
-  /* ---------- HEADER / NAV  ---------- */
-  header{                /* contenedor del logo + botones */
-      padding:.4rem 1rem;
-  }
-  .hamburger-menu{
-      font-size:1.6rem;
-      padding:.25rem .4rem;
-  }
-  nav ul{
-      padding:.4rem 0;   /* lista desplegable más fina    */
-  }
-  nav ul li a{
-      padding:.7rem 0;
-  }
-
-  /* ---------- HERO ---------- */
-  .hero{
-      height:100vh;
-      background-size:cover;
-      padding:0 1rem;
-  }
-  .hero .overlay{
-      padding:2rem 1rem;         /* menos alto */
-  }
-  .hero h1{
-      font-size:clamp(2rem,8vw,3rem);
-  }
-  .hero p{
-      font-size:clamp(.95rem,4.5vw,1.2rem);
-      margin-bottom:2rem;
-  }
-
-  /* ---------- SECCIONES (Experiencia, Educación, etc.) ---------- */
-  section{                       /* cualquier <section> */
-      padding:3rem 1rem;         /* márgenes laterales más finos */
-  }
-  section h2{                    /* títulos de sección */
-      font-size:clamp(1.6rem,7vw,2.2rem);
-      line-height:1.15;
-      margin-bottom:1.2rem;
-  }
-  section p,
-  section li{
-      font-size:clamp(.9rem,4.2vw,1.05rem);
-      line-height:1.5;
-  }
-
-  /* ---------- PROYECTOS / DASHBOARD ---------- */
-  .project-item iframe,
-  .project-item img{
-      aspect-ratio:4/3;
-      border-radius:12px;
-      box-shadow:0 6px 20px rgba(15,23,42,.15);
-  }
-  .hero .overlay {
-    display: flex;               /* de columna a fila */
-    justify-content: center;     /* centrar horizontal */
-    gap: 1rem;                   /* espacio entre ambos */
-    flex-wrap: wrap;             /* por si cabe muy justo */
-  }
-  .hero .overlay .btn,
-  .hero .overlay .social-link {
-    margin: 0 !important;        /* eliminamos el margin auto */
-  }
-
-  /* 2) Texto de la sección “Experiencia” alineado a la izquierda */
-  /* Si quieres sólo en esa sección, sustituye `section` por `#experiencia` */
-  section#experiencia p,
-  section#experiencia li {
-    text-align: left !important;
-  }
-  .top-right-container {
-    display: flex !important;        /* pasa a flex-row */
-    align-items: center;             /* alinea icono y botón */
-    justify-content: center;         /* centra el conjunto */
-    gap: 0.5rem;                     /* espacio reducido entre ellos */
-  }
-
-  /* Quita márgenes que los apilaban */
-  .top-right-container .language-button,
-  .top-right-container a[href*="linkedin.com"] {
-    margin: 0 !important;
-  }
-  .hero .overlay {
-    display: flex !important;           /* fila en lugar de columna */
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 0.5rem !important;             /* hueco estrecho entre ellos */
-  }
-
-  /* Quita márgenes que los apilaban */
-  .hero .overlay .btn,
-  .hero .overlay .social-link {
-    margin: 0 !important;
-  }
-
-  /* Achica el botón “English” */
-  .hero .overlay .btn {
-    padding: 0.4rem 0.8rem !important;
-    font-size: clamp(0.9rem, 4vw, 1.1rem) !important;
-  }
-
-  /* Achica el icono de LinkedIn */
-  .hero .overlay .social-link img,
-  .hero .overlay .social-link i {
-    width: 1.6rem !important;
-    height: auto !important;
-    font-size: 1.6rem !important;       /* en caso de que sea un font‑icon */
-  }
-  /* Ajusta estos selectores a tus IDs o clases reales si son distintos */
-  section#formacion p,
-  section#formacion li,
-  section#experiencia p,
-  section#experiencia li,
-  section#proyectos p,
-  section#proyectos li,
-  section#contacto p,
-  section#contacto li {
-    /* Mismo tamaño que usas en Sobre mí */
-    font-size: clamp(0.85rem, 4vw, 1rem) !important;
-    line-height: 1.4 !important;
-    text-align: left !important;    /* deja el texto alineado a la izquierda */
-  }
-  section#experiencia,
-  section#formacion,
-  section#proyectos {
-    /* antes tenías padding: 3rem 1rem; 
-       ahora reducimos a 0.5rem para ganar ancho */
-    padding-left: 0.5rem !important;
-    padding-right: 0.5rem !important;
-  }
-
-  /* Si además tienes un .container o .wrapper dentro de cada sección, 
-     asegúrate de que no limite el ancho: */
-  section#experiencia .container,
-  section#formacion .container,
-  section#proyectos .container {
-    max-width: 100% !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-  .top-right-container {
-        right: 3.5rem !important; /* Ajuste fino para espacio */
-        gap: 0.3rem !important;
+    header{
+        padding:0.6rem 0;
     }
 
-    .hamburger-menu {
-        font-size: 1.4rem !important;
-        right: 0.5rem !important;
+    nav{
+        padding:0 1rem;
+        min-height:64px;
     }
 
-    nav {
-        min-height: 50px !important; /* Aún más delgada en móviles pequeños */
-    }
-    /* Ajustes finos para mantener centrado en móviles pequeños */
-    .hero p {
-        font-size: clamp(1rem, 4vw, 1.25rem) !important; /* Reduce ligeramente el tamaño si es necesario */
+    nav ul{
+        border-radius:12px;
     }
 
-    /* Títulos aún más compactos en móviles pequeños */
-    section h2, .experience-item h2, .education-item h2, .project-item h3 {
-        font-size: clamp(1.4rem, 4.5vw, 2rem) !important;
+    nav ul li a{
+        font-size:0.8rem;
+        letter-spacing:0.08em;
     }
 
-    /* Fechas centradas con más espacio en pantallas pequeñas */
-    .experience-date, .education-date {
-        font-size: 12px !important; /* Tamaño reducido para encajar mejor */
+    .top-right-container{
+        width:min(100%, 18rem);
+        margin:0.75rem auto 0;
+        padding:0.75rem 1rem;
+        gap:0.5rem;
     }
-    .experience-item p, .experience-item ul li,
-    .education-item p, .education-item ul li,
-    .project-item p, .project-item ul li {
-        text-align: center !important;
-        /*font-size: clamp(0.85rem, 4vw, 1rem) !important;  Tamaño responsivo con centrado */
+
+    .language-button{
+        font-size:0.75rem;
+        padding:0.6rem 1rem;
     }
-    section#formacion p, section#experiencia p, section#proyectos p,
-    section#formacion li, section#experiencia li, section#proyectos li {
-        text-align: center !important;
+
+    .top-right-container .linkedin-logo{
+        width:40px;
+        height:40px;
     }
-    section#contacto p,
-    section#contacto li {
-        text-align: center !important;
+
+    .hero{
+        height:auto;
+        min-height:88vh;
+        padding:5rem 1.25rem 3.5rem;
     }
-    .experience-item ul li {
-        padding-left: 0 !important;
-        margin-bottom: 1rem !important;  /* Espacio entre items para mejor legibilidad sin bullets */
+
+    .hero .overlay{
+        padding:2.25rem 1.5rem;
+        transform:none;
+    }
+
+    .hero h1{
+        font-size:clamp(2rem,9vw,2.75rem);
+    }
+
+    .hero p{
+        font-size:clamp(1rem,4.6vw,1.28rem);
+        margin-bottom:1.75rem;
+    }
+
+    .btn{
+        padding:1rem 2.5rem;
+        font-size:0.75rem;
+    }
+
+    section{
+        padding:3rem 1rem;
+    }
+
+    .container,
+    .sobre-mi-container{
+        padding:0 1rem;
+    }
+
+    .education-list,
+    .experience-list{
+        padding:1.75rem;
+    }
+
+    .education-item,
+    .experience-item{
+        padding:1.5rem;
+        gap:1.25rem;
+    }
+
+    .education-logo,
+    .experience-logo{
+        width:96px;
+        height:96px;
+    }
+
+    .experience-item ul li,
+    .education-item ul li{
+        padding-left:1.25rem;
+    }
+
+    .experience-item ul li::before,
+    .education-item ul li::before{
+        left:0.3rem;
+    }
+
+    .profile-img{
+        width:220px;
+        height:220px;
+    }
+
+    .project-item{
+        margin-bottom:3rem;
+    }
+
+    .project-item iframe,
+    .project-item .dashboard-img{
+        aspect-ratio:4 / 3;
+        border-radius:12px;
+        box-shadow:0 6px 20px rgba(15,23,42,0.15);
+        margin:2rem auto;
+    }
+
+    .project-item iframe{
+        min-height:260px;
+    }
+
+    footer{
+        padding:2rem 0;
     }
 }
