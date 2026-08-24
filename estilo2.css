@@ -469,6 +469,19 @@ p {
     font-weight: 275;
 }
 
+.experience-item a {
+    color: #e8c39e;
+    font-weight: 400;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(232, 195, 158, 0.7);
+    transition: border-bottom-color 0.3s ease, color 0.3s ease;
+}
+
+.experience-item a:hover {
+    color: #f5dcc0;
+    border-bottom-color: #f5dcc0;
+}
+
 .experience-item ul li::before {
     content: '◦';
     position: absolute;
